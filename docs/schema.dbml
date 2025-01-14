@@ -1,0 +1,13 @@
+Table User {
+  id        Int     [pk, increment]
+  username  String
+}
+
+Table Playlist {
+  id            Int     [pk, increment]
+  name          String
+  description   String
+  ownerId       Int
+}
+
+Ref: Playlist.ownerId > User.id
